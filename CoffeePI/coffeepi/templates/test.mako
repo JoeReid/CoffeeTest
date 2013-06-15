@@ -4,4 +4,9 @@
 
 <%def name="body()">
 test
+
+    % for member in members:
+        ${member.name}
+    % endfor
+    
 </%def>
