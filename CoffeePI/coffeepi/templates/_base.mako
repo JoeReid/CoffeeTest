@@ -1,6 +1,7 @@
 <html>
     <head>
-        <title>test page thingy</title>
+        <%def name="title()">Coffee PI</%def>
+        <title>${self.title()}</title>
     </head>
     
     <body>
