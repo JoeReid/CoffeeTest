@@ -1,10 +1,5 @@
-<html>
-    <head>
-        <title>test page thingy</title>
-    </head>
-    
-    <body>
-        this is a test
-        ${a}
-    </body>
-</html>
+<%inherit file="_sidebar.mako"/>
+
+<%def name="body()">
+test
+</%def>
