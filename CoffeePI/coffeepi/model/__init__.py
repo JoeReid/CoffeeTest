@@ -46,4 +46,13 @@ def init_db():
    log.info("Create all tables bound to Base")
    Base.metadata.create_all(bind=DBSession.bind                 ) #, checkfirst=True
    
-   
+import transaction
+
+def commit():
+   """
+   Commits the db session regardless of if it was setup with the zope transaction manager
+   """
+   try:
+       DBSession.commit()
+   except AssertionError as ae:
+       transaction.commit()
